@@ -23,13 +23,14 @@ const Tracks2 = () => {
   
 
   async function fetchTracks() {
-    const URL = `tracks:${id}/type:${name}`;
+    const URL = `/tracks:${id}/type:${name}`;
     const config = {
       headers:{
         'Content-Type':'application/json',
         Authorization : `Bearer ${token}`
       }
     }
+    console.log(config)
     const response = await axios.get(URL, config);
 
     setData(response);

@@ -31,7 +31,7 @@ const Tracks = () => {
       }
     }
       
-      const URL = `tracks:${id}/type:${name}`
+      const URL = `/tracks:${id}/type:${name}`
       const response = await axios.get(URL, config);
       
       setData(response);
