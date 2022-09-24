@@ -23,7 +23,7 @@ const Tracks2 = () => {
   
 
   async function fetchTracks() {
-    const URL = `/tracks:${id}/type:${name}`;
+    const URL = `tracks:${id}/type:${name}`;
     const config = {
       headers:{
         'Content-Type':'application/json',

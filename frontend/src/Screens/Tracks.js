@@ -30,15 +30,13 @@ const Tracks = () => {
         Authorization : `Bearer ${token}`
       }
     }
-   
-      const URL = `/tracks:${id}/type:${name}`
-      const response = await axios.get(URL, config);
-      setFetched(true);
-      setData(response);
       
+      const URL = `tracks:${id}/type:${name}`
+      const response = await axios.get(URL, config);
+      
+      setData(response);
+      setFetched(true);
     
-   
- 
   }
 
   if (data === "") {
