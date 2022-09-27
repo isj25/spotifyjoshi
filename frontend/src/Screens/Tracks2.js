@@ -82,7 +82,7 @@ const Tracks2 = () => {
                               let playlist = localStorage.getItem('playlist')
                               let date = new Date()
                               localStorage.setItem('modified',date)
-                              const newItem = item.name.toString()+'@'+item.artists[0].name.toString()
+                              const newItem = item.name.toString()+'@'+item.artists[0].name.toString() + '@' + item.external_urls.spotify
                              // console.log(newItem)
                               playlist = playlist +'#'+newItem
                               localStorage.setItem('playlist',playlist)

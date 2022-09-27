@@ -22,7 +22,6 @@ code {
   margin: auto;
   padding: 3rem;
   line-height: 2rem;
-
 }
 
 .rec-row{
@@ -57,11 +56,29 @@ a{
 
 
 .playlist{
-
   padding-top: 2rem;
 }
 
 
+.musicimage{
+  width: 100%;
+  
+}
+
+.musictag{
+  font-size: 4rem;
+  padding-top: 2rem;
+  padding: auto;
+  text-align: center;
+  font-family: cursive;
+  color: grey;
+}
+
+.speaker
+{
+  text-align: right;
+  margin-right: 3rem;
+}
 .footer{
   text-align: center;
   margin-top: 5rem;

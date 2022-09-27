@@ -163,7 +163,7 @@ app.get("/tracks:id/type:name",async(req,res)=>{
     let name = req.params.name
     name = name.substring(1)
     let token = req.headers.authorization
-    console.log(token)
+    //console.log(token)
     if(!token)
     {
         res.status(401)

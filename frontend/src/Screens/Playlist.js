@@ -19,18 +19,18 @@ const Playlist = () => {
         }
     }
     
-    console.log(playlist)
+   // console.log(playlist)
 
     localStorage.setItem('playlistName',playlistName)
 
 
 
-    function removeHandler(name,artist)
+    function removeHandler(name,artist,link)
     {
         
         let playlist = localStorage.getItem('playlist')
-        let removeleft ='#'+name+'@'+artist 
-        let removeright = name+'@'+artist+'#'
+        let removeleft ='#'+name+'@'+artist +'@'+ link
+        let removeright = name+'@'+artist+'@' + link + '#'
         if(playlist.includes(removeleft))
         {
             playlist = playlist.replace(removeleft,'')
@@ -67,10 +67,11 @@ const Playlist = () => {
                         let arrayitem = item.split('@')
                     
                     return <tr key={index}>
-                        <td> {arrayitem[0]}</td>
+                        <td><i class="fa-solid fa-play"></i></td>
+                        <td><a href={arrayitem[2]} target="_blank" rel='noreferrer'> {arrayitem[0]} </a></td> 
                         <td>{arrayitem[1]}</td>
-                       
-                        <td><Button onClick={()=>removeHandler(arrayitem[0],arrayitem[1])}>Remove</Button> </td>
+                
+                        <td><Button onClick={()=>removeHandler(arrayitem[0],arrayitem[1],arrayitem[2])}>Remove</Button> </td>
                     </tr>
                 })
             }
